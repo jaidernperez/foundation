@@ -9,7 +9,7 @@ export default function Home() {
                data-navbar-on-scroll="data-navbar-on-scroll">
               <div className="container">
                   <a className="navbar-brand" href="#home">
-                      <img className="d-inline-block align-top img-fluid" src="/logo-icon.png" alt="" height={'50'} width={'50'}/>
+                      <img className="d-inline-block align-top img-fluid" src="/logo-icon.webp" alt="" height={'50'} width={'50'}/>
                   </a>
                   <button className="navbar-toggler collapsed" type="button" data-bs-toggle="collapse"
                           data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
@@ -45,7 +45,7 @@ export default function Home() {
               <div className="container">
                   <div className="row align-items-center min-vh-75 min-vh-lg-100">
                       <div className="col-md-7 col-lg-6 col-xxl-5 py-6 text-sm-start text-center">
-                          <h1 className="mb-4 mt-6 mb-sm-4 fw-semi-bold lh-sm fs-4 fs-lg-5 fs-xl-6">Fundación gente<br
+                          <h1 className="fw-bold mb-4 mt-6 mb-sm-4 lh-sm fs-4 fs-lg-5 fs-xl-6">Fundación gente<br
                               className="d-block d-lg-block"/>Social activa</h1>
                           <p className="mb-4 fs-1">Nuestro objetivo es impulsar proyectos sociales sostenibles en el
                               tiempo, apalancando los recursos que sean necesarios y generando las estrategias
@@ -60,7 +60,7 @@ export default function Home() {
               <div className="container">
                   <div className="row">
                       <div className="col-lg-9 mx-auto text-center mb-3">
-                          <h5 className="mb-3 fw-bold fs-3 fs-lg-5 lh-sm mb-3">Ejes de acción</h5>
+                          <h1 className="mb-3 fw-bold fs-3 fs-lg-5 lh-sm mb-3">Ejes de acción</h1>
                       </div>
                   </div>
                   <div className="row flex-center h-100">
@@ -69,11 +69,10 @@ export default function Home() {
                               <div className="col-md-4 mb-5">
                                   <div className="card h-100 shadow px-4 px-md-2 px-lg-3 card-span pt-6">
                                       <div className="text-center text-md-start card-hover">
-                                          <img className="ps-3 icons" src="/images/icons/growth.svg" height="60"
+                                          <img loading="lazy" className="ps-3 icons" src="/images/icons/growth.svg" height={"60"}
                                                alt=""/>
                                           <div className="card-body">
-                                              <h6 className="fw-bold fs-1 heading-color">Impulsando nuestro
-                                                  crecimiento</h6>
+                                              <h6 className="fw-bold fs-1 heading-color">Impulsando nuestro crecimiento</h6>
                                               <p className="mt-3 mb-md-0 mb-lg-2">Mediante la estructuración, gestión de
                                                   recursos e implementación de proyectos, que surjan al interior de la
                                                   Fundación y se logre el bienestar de nuestra población objetivo.</p>
@@ -84,11 +83,10 @@ export default function Home() {
                               <div className="col-md-4 mb-5">
                                   <div className="card h-100 shadow px-4 px-md-2 px-lg-3 card-span pt-6">
                                       <div className="text-center text-md-start card-hover">
-                                          <img className="ps-3 icons" src="/images/icons/community.svg" height="60"
+                                          <img loading="lazy" className="ps-3 icons" src="/images/icons/community.svg" height={'60'}
                                                alt=""/>
                                           <div className="card-body">
-                                              <h6 className="fw-bold fs-1 heading-color">Apoyada y articulada con otras
-                                                  Fundaciones</h6>
+                                              <h6 className="fw-bold fs-1 heading-color">Apoyada y articulada con otras Fundaciones</h6>
                                               <p className="mt-3 mb-md-0 mb-lg-2">A través de la ejecución de convenios
                                                   y asociaciones, de tal manera que en forma conjunta y articulada se
                                                   logren concebir proyectos benéficos para la población objetivo. </p>
@@ -99,7 +97,7 @@ export default function Home() {
                               <div className="col-md-4 mb-5">
                                   <div className="card h-100 shadow px-4 px-md-2 px-lg-3 card-span pt-6">
                                       <div className="text-center text-md-start card-hover">
-                                          <img className="ps-3 icons" src="/images/icons/company.svg" height="60"
+                                          <img loading="lazy" className="ps-3 icons" src="/images/icons/company.svg" height={'60'}
                                                alt=""/>
                                           <div className="card-body">
                                               <h6 className="fw-bold fs-1 heading-color">Fomentando iniciativas
@@ -124,17 +122,17 @@ export default function Home() {
                       <div className="col-xl-9 mb-3">
                           <div className="row">
                               <div className="col-lg-9 mb-3">
-                                  <h5 className="fw-bold fs-3 fs-lg-5 lh-sm mb-3">Conoce nuestras acciones</h5>
+                                  <h1 className="fw-bold fs-3 fs-lg-5 lh-sm mb-3">Conoce nuestras acciones</h1>
                                   <p className="mb-5">A continuación verás una pequeña muestra de lo que hacemos</p>
                               </div>
                               <div className="col-md-6 mb-5">
                                   <div className="card text-white">
-                                      <img className="br-20" src="/images/gallery/1.jpg" alt=""/>
+                                      <img loading="lazy" className="br-20" src="/images/gallery/1.webp" width={'100%'} height={'100%'} alt=""/>
                                   </div>
                               </div>
                               <div className="col-md-6 mb-5">
                                   <div className="card text-white">
-                                      <img className="br-20" src="/images/gallery/2.jpg" alt=""/>
+                                      <img loading="lazy" className="br-20" src="/images/gallery/2.webp" width={'100%'} height={'100%'} alt=""/>
                                   </div>
                               </div>
                           </div>
@@ -147,7 +145,7 @@ export default function Home() {
               <div className="container-lg">
                   <div className="row flex-center">
                       <div className="col-12 col-lg-10 col-xl-12">
-                          <h6 className="fs-3 fs-lg-4 fw-bold lh-sm">Comentarios</h6>
+                          <h1 className="fs-3 fs-lg-4 fw-bold lh-sm">Comentarios</h1>
                       </div>
                       <div className="carousel slide pt-3" id="carouselExampleDark" data-bs-ride="carousel">
                           <div className="carousel-inner">
@@ -156,9 +154,9 @@ export default function Home() {
                                       <div className="col-md-4 mb-5 mb-md-0">
                                           <div className="card h-100 shadow">
                                               <div className="card-body my-3">
-                                                  <div className="align-items-xl-center d-block d-xl-flex px-3"><img
-                                                      className="img-fluid me-3 me-md-2 me-lg-3"
-                                                      src="/images/gallery/user-1.png" width="50" alt=""/>
+                                                  <div className="align-items-xl-center d-block d-xl-flex px-3">
+                                                      <img loading="lazy" className="img-fluid me-3 me-md-2 me-lg-3"
+                                                      src="/images/gallery/user-1.webp" width={'50'} height={'50'} alt=""/>
                                                       <div className="flex-1 align-items-center pt-2">
                                                           <h5 className="mb-0 fw-bold text-info">Fernando Soler</h5>
                                                           <p className="fw-normal text-black">Telecommunication Engineer</p>
@@ -173,9 +171,9 @@ export default function Home() {
                                       <div className="col-md-4 mb-5 mb-md-0">
                                           <div className="card h-100 shadow">
                                               <div className="card-body my-3">
-                                                  <div className="align-items-xl-center d-block d-xl-flex px-3"><img
-                                                      className="img-fluid me-3 me-md-2 me-lg-3"
-                                                      src="/images/gallery/user-2.png" width="50" alt=""/>
+                                                  <div className="align-items-xl-center d-block d-xl-flex px-3">
+                                                      <img loading="lazy" className="img-fluid me-3 me-md-2 me-lg-3"
+                                                      src="/images/gallery/user-2.webp" width={'50'} height={'50'} alt=""/>
                                                       <div className="flex-1 align-items-center pt-2">
                                                           <h5 className="mb-0 fw-bold text-info">Ilone Pickford</h5>
                                                           <p className="fw-normal text-black">Head of Agrogofund </p>
@@ -190,9 +188,9 @@ export default function Home() {
                                       <div className="col-md-4 mb-5 mb-md-0">
                                           <div className="card h-100 shadow">
                                               <div className="card-body my-3">
-                                                  <div className="align-items-xl-center d-block d-xl-flex px-3"><img
-                                                      className="img-fluid me-3 me-md-2 me-lg-3"
-                                                      src="/images/gallery/user-3.png" width="50" alt=""/>
+                                                  <div className="align-items-xl-center d-block d-xl-flex px-3">
+                                                      <img loading="lazy" className="img-fluid me-3 me-md-2 me-lg-3"
+                                                      src="/images/gallery/user-3.webp" width={'50'} height={'50'} alt=""/>
                                                       <div className="flex-1 align-items-center pt-2">
                                                           <h5 className="mb-0 fw-bold text-info">Ed O’Brien</h5>
                                                           <p className="fw-normal text-black">Herbalist</p>
@@ -211,9 +209,9 @@ export default function Home() {
                                       <div className="col-md-4 mb-5 mb-md-0">
                                           <div className="card h-100 shadow">
                                               <div className="card-body my-3">
-                                                  <div className="align-items-xl-center d-block d-xl-flex px-3"><img
-                                                      className="img-fluid me-3 me-md-2 me-lg-3"
-                                                      src="/images/gallery/user-1.png" width="50" alt=""/>
+                                                  <div className="align-items-xl-center d-block d-xl-flex px-3">
+                                                      <img loading="lazy" className="img-fluid me-3 me-md-2 me-lg-3"
+                                                      src="/images/gallery/user-1.webp" width={'50'} height={'50'} alt=""/>
                                                       <div className="flex-1 align-items-center pt-2">
                                                           <h5 className="mb-0 fw-bold text-info">Fernando Soler</h5>
                                                           <p className="fw-normal text-black">Telecommunication
@@ -229,9 +227,9 @@ export default function Home() {
                                       <div className="col-md-4 mb-5 mb-md-0">
                                           <div className="card h-100 shadow">
                                               <div className="card-body my-3">
-                                                  <div className="align-items-xl-center d-block d-xl-flex px-3"><img
-                                                      className="img-fluid me-3 me-md-2 me-lg-3"
-                                                      src="/images/gallery/user-2.png" width="50" alt=""/>
+                                                  <div className="align-items-xl-center d-block d-xl-flex px-3">
+                                                      <img loading="lazy" className="img-fluid me-3 me-md-2 me-lg-3"
+                                                      src="/images/gallery/user-2.webp" width={'50'} height={'50'} alt=""/>
                                                       <div className="flex-1 align-items-center pt-2">
                                                           <h5 className="mb-0 fw-bold text-info">Ilone Pickford</h5>
                                                           <p className="fw-normal text-black">Head of Agrogofund
@@ -247,9 +245,9 @@ export default function Home() {
                                       <div className="col-md-4 mb-5 mb-md-0">
                                           <div className="card h-100 shadow">
                                               <div className="card-body my-3">
-                                                  <div className="align-items-xl-center d-block d-xl-flex px-3"><img
-                                                      className="img-fluid me-3 me-md-2 me-lg-3"
-                                                      src="/images/gallery/user-3.png" width="50" alt=""/>
+                                                  <div className="align-items-xl-center d-block d-xl-flex px-3">
+                                                      <img loading="lazy" className="img-fluid me-3 me-md-2 me-lg-3"
+                                                      src="/images/gallery/user-3.webp" width={'50'} height={'50'} alt=""/>
                                                       <div className="flex-1 align-items-center pt-2">
                                                           <h5 className="mb-0 fw-bold text-info">Ed O’Brien</h5>
                                                           <p className="fw-normal text-black">Herbalist</p>
@@ -268,9 +266,9 @@ export default function Home() {
                                       <div className="col-md-4 mb-5 mb-md-0">
                                           <div className="card h-100 shadow">
                                               <div className="card-body my-3">
-                                                  <div className="align-items-xl-center d-block d-xl-flex px-3"><img
-                                                      className="img-fluid me-3 me-md-2 me-lg-3"
-                                                      src="/images/gallery/user-1.png" width="50" alt=""/>
+                                                  <div className="align-items-xl-center d-block d-xl-flex px-3">
+                                                      <img loading="lazy" className="img-fluid me-3 me-md-2 me-lg-3"
+                                                      src="/images/gallery/user-1.webp" width={'50'} height={'50'} alt=""/>
                                                       <div className="flex-1 align-items-center pt-2">
                                                           <h5 className="mb-0 fw-bold text-info">Fernando Soler</h5>
                                                           <p className="fw-normal text-black">Telecommunication
@@ -286,9 +284,9 @@ export default function Home() {
                                       <div className="col-md-4 mb-5 mb-md-0">
                                           <div className="card h-100 shadow">
                                               <div className="card-body my-3">
-                                                  <div className="align-items-xl-center d-block d-xl-flex px-3"><img
-                                                      className="img-fluid me-3 me-md-2 me-lg-3"
-                                                      src="/images/gallery/user-2.png" width="50" alt=""/>
+                                                  <div className="align-items-xl-center d-block d-xl-flex px-3">
+                                                      <img className="img-fluid me-3 me-md-2 me-lg-3"
+                                                      src="/images/gallery/user-2.webp" width={'50'} height={'50'} alt=""/>
                                                       <div className="flex-1 align-items-center pt-2">
                                                           <h5 className="mb-0 fw-bold text-info">Ilone Pickford</h5>
                                                           <p className="fw-normal text-black">Head of Agrogofund
@@ -304,9 +302,9 @@ export default function Home() {
                                       <div className="col-md-4 mb-5 mb-md-0">
                                           <div className="card h-100 shadow">
                                               <div className="card-body my-3">
-                                                  <div className="align-items-xl-center d-block d-xl-flex px-3"><img
-                                                      className="img-fluid me-3 me-md-2 me-lg-3"
-                                                      src="/images/gallery/user-3.png" width="50" alt=""/>
+                                                  <div className="align-items-xl-center d-block d-xl-flex px-3">
+                                                      <img loading="lazy" className="img-fluid me-3 me-md-2 me-lg-3"
+                                                      src="/images/gallery/user-3.webp" width={'50'} height={'50'} alt=""/>
                                                       <div className="flex-1 align-items-center pt-2">
                                                           <h5 className="mb-0 fw-bold text-info">Ed O’Brien</h5>
                                                           <p className="fw-normal text-black">Herbalist</p>
@@ -345,8 +343,7 @@ export default function Home() {
                       <div className="col-12">
                           <div className="card shadow h-100 py-5">
                               <div className="card-body text-center">
-                                  <h1 className="fw-semi-bold mb-4">Compártenos tu
-                                      <span className="text-info">opinión</span>
+                                  <h1 className="fw-semi-bold mb-4">Compártenos tu <span className="text-info">opinión</span>
                                   </h1>
                                   <a className="btn btn-lg btn-success px-6" href="#" role="button">Comenta aquí</a>
                               </div>
@@ -399,7 +396,7 @@ export default function Home() {
                   <div className="row flex-center py-5">
                       <div className="col-12 col-sm-8 col-md-6 text-center text-md-start">
                           <a className="text-decoration-none" href="#home">
-                              <img className="d-inline-block align-top img-fluid" src="/logo-icon.png"
+                              <img loading="lazy" className="d-inline-block align-top img-fluid" src="/logo-icon.webp"
                                    alt="" width={'40'} height={'40'}/>
                           </a>
                       </div>
