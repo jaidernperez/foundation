@@ -7,7 +7,7 @@ import { PageProps } from "$fresh/server.ts";
 export default function Home(props: PageProps) {
     return (
         <main className={`main`} id="top">
-            <Navbar home={props.url.href == 'http://localhost:8000/'}/>
+            <Navbar home={props.url.href == 'https://foundation.deno.dev/'}/>
             <section className="py-0" id="home">
                 <div className="bg-holder d-none d-md-block"
                      style={`background-image:url(${asset('/images/illustrations/welcome.svg')});background-position:right top;background-size:contain;`}>

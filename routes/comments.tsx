@@ -7,7 +7,7 @@ import { PageProps } from "$fresh/server.ts";
 export default function Comments(props: PageProps) {
     return (
         <main className={'main d-flex flex-column min-vh-100'} id={'top'}>
-            <Navbar home={props.url.href == 'http://localhost:8000/'}/>
+            <Navbar home={props.url.href == 'https://foundation.deno.dev/'}/>
 
             <section className={'mt-5 container text-center'}>
                 <h2 className={'fw-bold mb-4'}>Escribe tu comentario</h2>
