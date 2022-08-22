@@ -2,7 +2,6 @@
 import {h} from 'preact';
 import {Navbar} from '../components/Navbar.tsx';
 import CommentsForm from '../islands/CommentsForm.tsx';
-import {config} from 'https://deno.land/x/dotenv/mod.ts';
 
 export default function Comments() {
     return (
@@ -13,7 +12,7 @@ export default function Comments() {
                 <h2 className={'fw-bold mb-4 text-center'}>Escribe tu comentario</h2>
                 <div className={'container d-flex justify-content-center'}>
                     <div className={'col-12 col-sm-6 col-md-6 col-lg-6'}>
-                        <CommentsForm url={config()['API_BASE_URL']}/>
+                        <CommentsForm url={'https://powerful-plains-87201.herokuapp.com/api/comments'}/>
                     </div>
                 </div>
             </section>

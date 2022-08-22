@@ -5,11 +5,10 @@ import {Navbar} from '../components/Navbar.tsx';
 import {Handlers, PageProps} from '$fresh/server.ts';
 import {Slice} from '../components/Slice.tsx';
 import {Comment} from '../models/Comment.ts';
-import {config} from 'https://deno.land/x/dotenv/mod.ts';
 
 export const handler: Handlers<Comment[][] | null> = {
     async GET(_, ctx) {
-        const resp = await fetch(`${config()['API_BASE_URL']}`);
+        const resp = await fetch(`https://powerful-plains-87201.herokuapp.com/api/comments`);
         if (resp.status !== 200) {
             return ctx.render(null);
         }
