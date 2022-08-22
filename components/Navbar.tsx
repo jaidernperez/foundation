@@ -35,6 +35,9 @@ export function Navbar(props: Props) {
                             <li className="nav-item px-2">
                                 <a className="nav-link fw-medium" href="#actions">Nuestras acciones</a>
                             </li>
+                            <li className="nav-item px-2">
+                                <a className="nav-link fw-medium" href="/resources">Documentos legales</a>
+                            </li>
                         </ul>
                         <form className="d-flex">
                             <a href={'#contacts'} className="btn btn-lg btn-primary order-0"
@@ -46,6 +49,9 @@ export function Navbar(props: Props) {
                         <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                             <li className="nav-item px-2">
                                 <a className="nav-link fw-medium active" aria-current="page" href="/">Home</a>
+                            </li>
+                            <li className="nav-item px-2">
+                                <a className="nav-link fw-medium" href="/resources">Documentos legales</a>
                             </li>
                         </ul>
                     </div>}
