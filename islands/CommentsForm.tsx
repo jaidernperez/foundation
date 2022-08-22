@@ -88,7 +88,7 @@ export default function CommentsForm(props: Props) {
                 </div> : ''}
             {successCreated ?
                 <div className={`alert alert-info`} role="alert">
-                    Mensaje creado con éxito
+                    Comentario creado con éxito
                 </div> : ''}
 
             <form onSubmit={handleSubmit}>
