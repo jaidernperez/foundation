@@ -40,11 +40,15 @@ export function Navbar(props: Props) {
                             <a href={'#contacts'} className="btn btn-lg btn-primary order-0"
                                type="submit">Contáctenos</a>
                         </form>
-                    </div> : <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li className="nav-item px-2">
-                            <a className="nav-link fw-medium active" aria-current="page" href="/">Home</a>
-                        </li>
-                    </ul>}
+                    </div> :
+                    <div className="collapse navbar-collapse border-top border-lg-0 mt-4 mt-lg-0"
+                         id="navbarSupportedContent">
+                        <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li className="nav-item px-2">
+                                <a className="nav-link fw-medium active" aria-current="page" href="/">Home</a>
+                            </li>
+                        </ul>
+                    </div>}
             </div>
         </nav>
     );

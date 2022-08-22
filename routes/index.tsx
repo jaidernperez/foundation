@@ -2,12 +2,31 @@
 import {h} from 'preact';
 import {asset} from '$fresh/runtime.ts';
 import {Navbar} from '../components/Navbar.tsx';
-import { PageProps } from "$fresh/server.ts";
+import {Handlers, PageProps} from '$fresh/server.ts';
+import {Slice} from '../components/Slice.tsx';
+import {Comment} from '../models/Comment.ts';
+import {config} from 'https://deno.land/x/dotenv/mod.ts';
 
-export default function Home(props: PageProps) {
+export const handler: Handlers<Comment[][] | null> = {
+    async GET(_, ctx) {
+        const resp = await fetch(`${config()['API_BASE_URL']}`);
+        if (resp.status !== 200) {
+            return ctx.render(null);
+        }
+        const response = await resp.json();
+        const chunkedComments: Comment[][] = [];
+        for (let i = 0; i < response.data.length; i += 3) {
+            const chunk = response.data.slice(i, i + 3);
+            chunkedComments.push(chunk);
+        }
+        return ctx.render(chunkedComments);
+    },
+};
+
+export default function Home({data}: PageProps<Comment[][] | null>) {
     return (
         <main className={`main`} id="top">
-            <Navbar home={props.url.href == 'https://foundation.deno.dev/'}/>
+            <Navbar home={true}/>
             <section className="py-0" id="home">
                 <div className="bg-holder d-none d-md-block"
                      style={`background-image:url(${asset('/images/illustrations/welcome.svg')});background-position:right top;background-size:contain;`}>
@@ -48,9 +67,9 @@ export default function Home(props: PageProps) {
                                                 <h6 className="fw-bold fs-1 heading-color">Impulsando nuestro
                                                     crecimiento</h6>
                                                 <p className="mt-3 mb-md-0 mb-lg-2">Mediante la estructuración, gestión
-                                                    de
-                                                    recursos e implementación de proyectos, que surjan al interior de la
-                                                    Fundación y se logre el bienestar de nuestra población objetivo.</p>
+                                                    de recursos e implementación de proyectos, que surjan al interior de
+                                                    la Fundación y se logre el bienestar de nuestra población
+                                                    objetivo.</p>
                                             </div>
                                         </div>
                                     </div>
@@ -272,7 +291,8 @@ export default function Home(props: PageProps) {
                                     </li>
                                 </ul>
                                 <div className="tab-content" id="myTabContent">
-                                    <div className="tab-pane fade active show" id="tab1" role="tabpanel" aria-labelledby="tab-1">
+                                    <div className="tab-pane fade active show" id="tab1" role="tabpanel"
+                                         aria-labelledby="tab-1">
                                         <div className="my-6">
                                             <div className="text-center w-100 mb-5">
                                                 <img loading="lazy" className="br-20 w-100 w-md-75 w-lg-75"
@@ -400,187 +420,7 @@ export default function Home(props: PageProps) {
                         </div>
                         <div className="carousel slide pt-3" id="carouselExampleDark" data-bs-ride="carousel">
                             <div className="carousel-inner">
-                                <div className="carousel-item active" data-bs-interval="10000">
-                                    <div className="row h-100 mx-3 mx-sm-5 mx-md-4 my-md-7 m-lg-7 mt-7">
-                                        <div className="col-md-4 mb-5 mb-md-0">
-                                            <div className="card h-100 shadow">
-                                                <div className="card-body my-3">
-                                                    <div className="align-items-xl-center d-block d-xl-flex px-3">
-                                                        <img loading="lazy" className="img-fluid me-3 me-md-2 me-lg-3"
-                                                             src="/images/gallery/user-1.webp" width={'50'}
-                                                             height={'50'} alt=""/>
-                                                        <div className="flex-1 align-items-center pt-2">
-                                                            <h5 className="mb-0 fw-bold text-info">Fernando Soler</h5>
-                                                            <p className="fw-normal text-black">Telecommunication
-                                                                Engineer</p>
-                                                        </div>
-                                                    </div>
-                                                    <p className="mb-0 px-3 px-md-2 px-xxl-3">&quot;Quis autem vel eum
-                                                        iure reprehenderit qui in ea voluptate velit esse quam nihil
-                                                        molestiae</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div className="col-md-4 mb-5 mb-md-0">
-                                            <div className="card h-100 shadow">
-                                                <div className="card-body my-3">
-                                                    <div className="align-items-xl-center d-block d-xl-flex px-3">
-                                                        <img loading="lazy" className="img-fluid me-3 me-md-2 me-lg-3"
-                                                             src="/images/gallery/user-2.webp" width={'50'}
-                                                             height={'50'} alt=""/>
-                                                        <div className="flex-1 align-items-center pt-2">
-                                                            <h5 className="mb-0 fw-bold text-info">Ilone Pickford</h5>
-                                                            <p className="fw-normal text-black">Head of Agrogofund </p>
-                                                        </div>
-                                                    </div>
-                                                    <p className="mb-0 px-3 px-md-2 px-xxl-3">&quot;At vero eos et
-                                                        accusamus et iusto odio dignissimos ducimus qui blanditiis
-                                                        praesentium </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div className="col-md-4 mb-5 mb-md-0">
-                                            <div className="card h-100 shadow">
-                                                <div className="card-body my-3">
-                                                    <div className="align-items-xl-center d-block d-xl-flex px-3">
-                                                        <img loading="lazy" className="img-fluid me-3 me-md-2 me-lg-3"
-                                                             src="/images/gallery/user-3.webp" width={'50'}
-                                                             height={'50'} alt=""/>
-                                                        <div className="flex-1 align-items-center pt-2">
-                                                            <h5 className="mb-0 fw-bold text-info">Ed O’Brien</h5>
-                                                            <p className="fw-normal text-black">Herbalist</p>
-                                                        </div>
-                                                    </div>
-                                                    <p className="mb-0 px-3 px-md-2 px-xxl-3">&quot;At vero eos et
-                                                        accusamus et iusto odio dignissimos ducimus qui blanditiis
-                                                        praesentium </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="carousel-item" data-bs-interval="2000">
-                                    <div className="row h-100 mx-3 mx-sm-5 mx-md-4 my-md-7 m-lg-7 mt-7">
-                                        <div className="col-md-4 mb-5 mb-md-0">
-                                            <div className="card h-100 shadow">
-                                                <div className="card-body my-3">
-                                                    <div className="align-items-xl-center d-block d-xl-flex px-3">
-                                                        <img loading="lazy" className="img-fluid me-3 me-md-2 me-lg-3"
-                                                             src="/images/gallery/user-1.webp" width={'50'}
-                                                             height={'50'} alt=""/>
-                                                        <div className="flex-1 align-items-center pt-2">
-                                                            <h5 className="mb-0 fw-bold text-info">Fernando Soler</h5>
-                                                            <p className="fw-normal text-black">Telecommunication
-                                                                Engineer</p>
-                                                        </div>
-                                                    </div>
-                                                    <p className="mb-0 px-3 px-md-2 px-xxl-3">&quot;Quis autem vel eum
-                                                        iure reprehenderit qui in ea voluptate velit esse quam nihil
-                                                        molestiae</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div className="col-md-4 mb-5 mb-md-0">
-                                            <div className="card h-100 shadow">
-                                                <div className="card-body my-3">
-                                                    <div className="align-items-xl-center d-block d-xl-flex px-3">
-                                                        <img loading="lazy" className="img-fluid me-3 me-md-2 me-lg-3"
-                                                             src="/images/gallery/user-2.webp" width={'50'}
-                                                             height={'50'} alt=""/>
-                                                        <div className="flex-1 align-items-center pt-2">
-                                                            <h5 className="mb-0 fw-bold text-info">Ilone Pickford</h5>
-                                                            <p className="fw-normal text-black">Head of Agrogofund
-                                                                Groups </p>
-                                                        </div>
-                                                    </div>
-                                                    <p className="mb-0 px-3 px-md-2 px-xxl-3">&quot;At vero eos et
-                                                        accusamus et iusto odio dignissimos ducimus qui blanditiis
-                                                        praesentium </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div className="col-md-4 mb-5 mb-md-0">
-                                            <div className="card h-100 shadow">
-                                                <div className="card-body my-3">
-                                                    <div className="align-items-xl-center d-block d-xl-flex px-3">
-                                                        <img loading="lazy" className="img-fluid me-3 me-md-2 me-lg-3"
-                                                             src="/images/gallery/user-3.webp" width={'50'}
-                                                             height={'50'} alt=""/>
-                                                        <div className="flex-1 align-items-center pt-2">
-                                                            <h5 className="mb-0 fw-bold text-info">Ed O’Brien</h5>
-                                                            <p className="fw-normal text-black">Herbalist</p>
-                                                        </div>
-                                                    </div>
-                                                    <p className="mb-0 px-3 px-md-2 px-xxl-3">&quot;Ui dolorem eum
-                                                        fugiat
-                                                        quo voluptas nulla pariatur? At vero eos et accusamus et iusto
-                                                        odio</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="carousel-item">
-                                    <div className="row h-100 mx-3 mx-sm-5 mx-md-4 my-md-7 m-lg-7 mt-7">
-                                        <div className="col-md-4 mb-5 mb-md-0">
-                                            <div className="card h-100 shadow">
-                                                <div className="card-body my-3">
-                                                    <div className="align-items-xl-center d-block d-xl-flex px-3">
-                                                        <img loading="lazy" className="img-fluid me-3 me-md-2 me-lg-3"
-                                                             src="/images/gallery/user-1.webp" width={'50'}
-                                                             height={'50'} alt=""/>
-                                                        <div className="flex-1 align-items-center pt-2">
-                                                            <h5 className="mb-0 fw-bold text-info">Fernando Soler</h5>
-                                                            <p className="fw-normal text-black">Telecommunication
-                                                                Engineer</p>
-                                                        </div>
-                                                    </div>
-                                                    <p className="mb-0 px-3 px-md-2 px-xxl-3">&quot;Quis autem vel eum
-                                                        iure reprehenderit qui in ea voluptate velit esse quam nihil
-                                                        molestiae</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div className="col-md-4 mb-5 mb-md-0">
-                                            <div className="card h-100 shadow">
-                                                <div className="card-body my-3">
-                                                    <div className="align-items-xl-center d-block d-xl-flex px-3">
-                                                        <img className="img-fluid me-3 me-md-2 me-lg-3"
-                                                             src="/images/gallery/user-2.webp" width={'50'}
-                                                             height={'50'} alt=""/>
-                                                        <div className="flex-1 align-items-center pt-2">
-                                                            <h5 className="mb-0 fw-bold text-info">Ilone Pickford</h5>
-                                                            <p className="fw-normal text-black">Head of Agrogofund
-                                                                Groups </p>
-                                                        </div>
-                                                    </div>
-                                                    <p className="mb-0 px-3 px-md-2 px-xxl-3">&quot;At vero eos et
-                                                        accusamus et iusto odio dignissimos ducimus qui blanditiis
-                                                        praesentium </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div className="col-md-4 mb-5 mb-md-0">
-                                            <div className="card h-100 shadow">
-                                                <div className="card-body my-3">
-                                                    <div className="align-items-xl-center d-block d-xl-flex px-3">
-                                                        <img loading="lazy" className="img-fluid me-3 me-md-2 me-lg-3"
-                                                             src="/images/gallery/user-3.webp" width={'50'}
-                                                             height={'50'} alt=""/>
-                                                        <div className="flex-1 align-items-center pt-2">
-                                                            <h5 className="mb-0 fw-bold text-info">Ed O’Brien</h5>
-                                                            <p className="fw-normal text-black">Herbalist</p>
-                                                        </div>
-                                                    </div>
-                                                    <p className="mb-0 px-3 px-md-2 px-xxl-3">&quot;Ui dolorem eum
-                                                        fugiat
-                                                        quo voluptas nulla pariatur? At vero eos et accusamus et iusto
-                                                        odio</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                                {!data ? <p>Aún no hay comentarios</p> : <Slice data={data}/>}
                             </div>
                             <div className="row px-3 px-sm-6 px-md-0 px-lg-5 px-xl-4">
                                 <div className="col-12 position-relative">
@@ -608,7 +448,8 @@ export default function Home(props: PageProps) {
                                     <h1 className="fw-semi-bold mb-4">Compártenos tu <span
                                         className="text-info">opinión</span>
                                     </h1>
-                                    <a className="btn btn-lg btn-success px-6" href="/comments" role="button">Comenta aquí</a>
+                                    <a className="btn btn-lg btn-success px-6" href="/comments" role="button">Comenta
+                                        aquí</a>
                                 </div>
                             </div>
                         </div>
