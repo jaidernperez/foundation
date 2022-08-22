@@ -419,7 +419,7 @@ export default function Home({data}: PageProps<Comment[][] | null>) {
                         </div>
                         <div className="carousel slide pt-3" id="carouselExampleDark" data-bs-ride="carousel">
                             <div className="carousel-inner">
-                                {!data ? <p>Aún no hay comentarios</p> : <Slice data={data}/>}
+                                {!data || data.length == 0 ? <p>Aún no hay comentarios</p> : <Slice data={data}/>}
                             </div>
                             <div className="row px-3 px-sm-6 px-md-0 px-lg-5 px-xl-4">
                                 <div className="col-12 position-relative">
