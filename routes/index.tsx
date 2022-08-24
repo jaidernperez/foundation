@@ -27,15 +27,15 @@ export default function Home({data}: PageProps<Comment[][] | null>) {
         <main className={`main`} id="top">
             <Navbar home={true}/>
             <section className="py-0" id="home">
-                <div className="bg-holder d-none d-md-block"
-                     style={`background-image:url(${asset('/images/illustrations/welcome.svg')});background-position:right top;background-size:contain;`}>
+                <div className="bg-holder d-none d-md-block" loading={'lazy'}
+                     style={`background-image:url(${asset('/logo-icon.webp')});background-position:right top;background-size:contain;`}>
                 </div>
 
                 <div className="container">
                     <div className="row align-items-center min-vh-75 min-vh-lg-100">
                         <div className="col-md-7 col-lg-6 col-xxl-5 py-6 text-sm-start text-center">
-                            <h1 className="fw-bold mb-4 mt-6 mb-sm-4 lh-sm fs-4 fs-lg-5 fs-xl-6">Fundación gente<br
-                                className="d-block d-lg-block"/>Social activa</h1>
+                            <h1 className="fw-bold mb-4 mt-6 mb-sm-4 lh-sm fs-4 fs-lg-5 fs-xl-6">Fundación Gente<br
+                                className="d-block d-lg-block"/>Social Activa</h1>
                             <p className="mb-4 fs-1">Nuestro objetivo es impulsar proyectos sociales sostenibles en el
                                 tiempo, apalancando los recursos que sean necesarios y generando las estrategias
                                 requeridas para su implementación y sustento, mejorando la calidad de vida de las
@@ -411,7 +411,7 @@ export default function Home({data}: PageProps<Comment[][] | null>) {
                 </div>
             </section>
 
-            <section className="py-8" id="testimonial">
+            <section className="pt-8 pb-4" id="testimonial">
                 <div className="container-lg">
                     <div className="row flex-center">
                         <div className="col-12 col-lg-10 col-xl-12">
@@ -464,7 +464,7 @@ export default function Home({data}: PageProps<Comment[][] | null>) {
                 <div className="container">
                     <div className="row justify-content-lg-between min-vh-75" style="padding-top:21rem">
                         <div className="col-6 col-sm-4 col-lg-auto mb-3">
-                            <h6 className="mb-3 text-1000 fw-semi-bold">Fundación gente social activa</h6>
+                            <h6 className="mb-3 text-1000 fw-semi-bold">Fundación Gente Social Activa</h6>
                             <ul className="list-unstyled mb-md-4 mb-lg-0">
                                 <li className="mb-3">
                                     <a className="text-700 text-decoration-none" href="#home">Home</a>
@@ -503,8 +503,8 @@ export default function Home({data}: PageProps<Comment[][] | null>) {
                             </a>
                         </div>
                         <div className="col-12 col-sm-8 col-md-6">
-                            <p className="fs--1 text-dark my-2 text-center text-md-end">&copy; Copyright Fundación gente
-                                social activa &nbsp;
+                            <p className="fs--1 text-dark my-2 text-center text-md-end">&copy; Copyright Fundación Gente
+                                Social Activa &nbsp;
                             </p>
                         </div>
                     </div>

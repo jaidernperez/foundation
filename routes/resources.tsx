@@ -8,7 +8,7 @@ export default function Resources() {
             <Navbar home={false}/>
 
             <section className={'mt-4 container'}>
-                <h1 className={'fw-bold mb-4 text-center'}>Documentos legales</h1>
+                <h1 className={'fw-bold mb-4 text-center'}>Documentos Legales</h1>
                 <ul>
                     <li className="nav-item px-2">
                         <a className="nav-link fw-medium" href="/resources/Financieros.pdf">Estados financieros 2021</a>
@@ -51,8 +51,8 @@ export default function Resources() {
                             </a>
                         </div>
                         <div className="col-12 col-sm-8 col-md-6">
-                            <p className="fs--1 text-dark my-2 text-center text-md-end">&copy; Copyright Fundación gente
-                                social activa &nbsp;
+                            <p className="fs--1 text-dark my-2 text-center text-md-end">&copy; Copyright Fundación Gente
+                                Social Activa &nbsp;
                             </p>
                         </div>
                     </div>
