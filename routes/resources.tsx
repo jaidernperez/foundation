@@ -15,26 +15,26 @@ export default function Resources() {
                     </li>
 
                     <li className="nav-item px-2">
-                        <a className="nav-link fw-medium" href="/resources/REVISOR_FISCAL.pdf">Dictamen 2021 revisión fiscal</a>
+                        <a className="nav-link fw-medium" href="/resources/REVISOR_FISCAL.pdf">Dictamen 2021 Revisor Fiscal</a>
                     </li>
 
                     <li className="nav-item px-2">
-                        <a className="nav-link fw-medium" href="/resources/REPRESENTANTE_LEGAL.pdf">Certificado representante legal 364-3</a></li>
+                        <a className="nav-link fw-medium" href="/resources/REPRESENTANTE_LEGAL.pdf">Certificado Representante Legal 364-3</a></li>
 
                     <li className="nav-item px-2">
-                        <a className="nav-link fw-medium" href="/resources/CERTIFICADO_DE_CUMPLIMIENTO.pdf">Certificado cumplimiento requisitos Art 364-5</a>
+                        <a className="nav-link fw-medium" href="/resources/CERTIFICADO_DE_CUMPLIMIENTO.pdf">Certificado Cumplimiento Requisitos Art 364-5</a>
                     </li>
 
                     <li className="nav-item px-2">
-                        <a className="nav-link fw-medium" href="/resources/CAMARA_COMERCIO.pdf">Certificado cámara y Comercio</a>
+                        <a className="nav-link fw-medium" href="/resources/CAMARA_COMERCIO.pdf">Certificado Cámara de Comercio</a>
                     </li>
 
                     <li className="nav-item px-2">
-                        <a className="nav-link fw-medium" href="/resources/CAMARA_ACTUALIZADO.pdf">Certificado cámara y comercio Actualizado</a>
+                        <a className="nav-link fw-medium" href="/resources/CAMARA_ACTUALIZADO.pdf">Certificado Cámara de Comercio Actualizado</a>
                     </li>
 
                     <li className="nav-item px-2">
-                        <a className="nav-link fw-medium" href="/resources/ACTA_ASAMBLEA.pdf">Acta asamblea 2022</a>
+                        <a className="nav-link fw-medium" href="/resources/ACTA_ASAMBLEA.pdf">Acta de Asamblea 2022</a>
                     </li>
 
                 </ul>
