@@ -11,7 +11,7 @@ export default function Resources() {
                 <h1 className={'fw-bold mb-4 text-center'}>Documentos Legales</h1>
                 <ul>
                     <li className="nav-item px-2">
-                        <a className="nav-link fw-medium" href="/resources/Financieros.pdf">Estados financieros 2021</a>
+                        <a className="nav-link fw-medium" href="/resources/Financieros.pdf">Estados Financieros 2021</a>
                     </li>
 
                     <li className="nav-item px-2">
