@@ -1,5 +1,3 @@
-/** @jsx h */
-import {h} from 'preact';
 import {CommentBox} from './CommentBox.tsx';
 import {Comment} from '../models/Comment.ts';
 

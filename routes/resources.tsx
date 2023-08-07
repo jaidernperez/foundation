@@ -1,5 +1,3 @@
-/** @jsx h */
-import {h} from 'preact';
 import {Navbar} from '../components/Navbar.tsx';
 
 export default function Resources() {
@@ -11,30 +9,26 @@ export default function Resources() {
                 <h1 className={'fw-bold mb-4 text-center'}>Documentos Legales</h1>
                 <ul>
                     <li className="nav-item px-2">
-                        <a className="nav-link fw-medium" href="/resources/Financieros.pdf">Estados Financieros 2021</a>
+                        <a className="nav-link fw-medium" href="/resources/ACTA ASAMBLEA 2023.pdf">ACTA ASAMBLEA 2023.pdf</a>
                     </li>
 
                     <li className="nav-item px-2">
-                        <a className="nav-link fw-medium" href="/resources/REVISOR_FISCAL.pdf">Dictamen 2021 Revisor Fiscal</a>
+                        <a className="nav-link fw-medium" href="/resources/CERTIFICADO CAMARA DE COMERCIO.pdf">CERTIFICADO CAMARA DE COMERCIO.pdf</a>
                     </li>
 
                     <li className="nav-item px-2">
-                        <a className="nav-link fw-medium" href="/resources/REPRESENTANTE_LEGAL.pdf">Certificado Representante Legal 364-3</a></li>
+                        <a className="nav-link fw-medium" href="/resources/CERTIFICADO CUMPLIMIENTO DE REQUISITOS ART.364-5.pdf">CERTIFICADO CUMPLIMIENTO DE REQUISITOS ART.364-5.pdf</a></li>
 
                     <li className="nav-item px-2">
-                        <a className="nav-link fw-medium" href="/resources/CERTIFICADO_DE_CUMPLIMIENTO.pdf">Certificado Cumplimiento Requisitos Art 364-5</a>
+                        <a className="nav-link fw-medium" href="/resources/CERTIFICADO REPRESENTANTE LEGAL ART.364-3.pdf">CERTIFICADO REPRESENTANTE LEGAL ART.364-3.pdf</a>
                     </li>
 
                     <li className="nav-item px-2">
-                        <a className="nav-link fw-medium" href="/resources/CAMARA_COMERCIO.pdf">Certificado Cámara de Comercio</a>
+                        <a className="nav-link fw-medium" href="/resources/DICTAMEN REVISOR FISCAL 2023.pdf">DICTAMEN REVISOR FISCAL 2023.pdf</a>
                     </li>
 
                     <li className="nav-item px-2">
-                        <a className="nav-link fw-medium" href="/resources/CAMARA_ACTUALIZADO.pdf">Certificado Cámara de Comercio Actualizado</a>
-                    </li>
-
-                    <li className="nav-item px-2">
-                        <a className="nav-link fw-medium" href="/resources/ACTA_ASAMBLEA.pdf">Acta de Asamblea 2022</a>
+                        <a className="nav-link fw-medium" href="/resources/ESTADOS FINANCIEROS 2022.pdf">ESTADOS FINANCIEROS 2022.pdf</a>
                     </li>
 
                 </ul>

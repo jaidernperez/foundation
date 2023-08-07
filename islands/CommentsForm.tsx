@@ -1,5 +1,3 @@
-/** @jsx h */
-import {h} from 'preact';
 import {useState} from 'preact/hooks';
 import {axiod} from 'https://deno.land/x/axiod/mod.ts';
 

@@ -1,5 +1,3 @@
-/** @jsx h */
-import {h} from 'preact';
 import {asset} from '$fresh/runtime.ts';
 import {Navbar} from '../components/Navbar.tsx';
 import {Handlers, PageProps} from '$fresh/server.ts';
