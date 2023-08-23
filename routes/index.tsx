@@ -6,12 +6,11 @@ import {Comment} from '../models/Comment.ts';
 
 export const handler: Handlers<Comment[][] | null> = {
     async GET(_, ctx): Promise<any> {
-        const resp: Response = await fetch(Deno.env.get("API_BASE_URL"));
+        const resp: Response = await fetch("https://foundation.deno.dev/api/comments");
         if (resp.status !== 200) {
             return ctx.render(null);
         }
         const response = await resp.json();
-        console.log("The response: ", response, ", the base URL: ", Deno.env.get("API_BASE_URL"));
         const chunkedComments: Comment[][] = [];
         for (let i = 0; i < response.length; i += 3) {
             const chunk = response.slice(i, i + 3);
