@@ -3,13 +3,10 @@ import {Navbar} from '../components/Navbar.tsx';
 import {Handlers, PageProps} from '$fresh/server.ts';
 import {Slice} from '../components/Slice.tsx';
 import {Comment} from '../models/Comment.ts';
-import {load} from "https://deno.land/std/dotenv/mod.ts";
-
-const env = await load();
 
 export const handler: Handlers<Comment[][] | null> = {
     async GET(_, ctx) {
-        const resp = await fetch(env['API_BASE_URL']);
+        const resp = await fetch(Deno.env.get("API_BASE_URL"));
         if (resp.status !== 200) {
             return ctx.render(null);
         }
