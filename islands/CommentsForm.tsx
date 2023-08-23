@@ -58,12 +58,10 @@ export default function CommentsForm(props: Props) {
         setLoading(true);
         axiod.post(`${props.url}`,
             {
-                comment: {
-                    name: name,
-                    occupation: occupation,
-                    comment: comment,
-                    profile: (sex == 'male') ? '/images/gallery/male-user.svg' : '/images/gallery/female-user.svg'
-                }
+                name: name,
+                occupation: occupation,
+                comment: comment,
+                profile: (sex == 'male') ? '/images/gallery/male-user.svg' : '/images/gallery/female-user.svg'
             })
             .then(() => {
                 setLoading(false);
@@ -86,7 +84,7 @@ export default function CommentsForm(props: Props) {
                 </div> : ''}
             {successCreated ?
                 <div className={`alert alert-info`} role="alert">
-                    Comentario creado con éxito
+                    Tu comentario ha sido agregado con éxito, gracias por tu opinión
                 </div> : ''}
 
             <form onSubmit={handleSubmit}>

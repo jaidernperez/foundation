@@ -3,17 +3,21 @@
 // This file is automatically updated during development when running `dev.ts`.
 
 import * as $0 from "./routes/_app.tsx";
-import * as $1 from "./routes/comments.tsx";
-import * as $2 from "./routes/index.tsx";
-import * as $3 from "./routes/resources.tsx";
+import * as $1 from "./routes/api/comments/[id].ts";
+import * as $2 from "./routes/api/comments/index.ts";
+import * as $3 from "./routes/comments.tsx";
+import * as $4 from "./routes/index.tsx";
+import * as $5 from "./routes/resources.tsx";
 import * as $$0 from "./islands/CommentsForm.tsx";
 
 const manifest = {
   routes: {
     "./routes/_app.tsx": $0,
-    "./routes/comments.tsx": $1,
-    "./routes/index.tsx": $2,
-    "./routes/resources.tsx": $3,
+    "./routes/api/comments/[id].ts": $1,
+    "./routes/api/comments/index.ts": $2,
+    "./routes/comments.tsx": $3,
+    "./routes/index.tsx": $4,
+    "./routes/resources.tsx": $5,
   },
   islands: {
     "./islands/CommentsForm.tsx": $$0,

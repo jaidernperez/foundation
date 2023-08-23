@@ -3,17 +3,20 @@ import {Navbar} from '../components/Navbar.tsx';
 import {Handlers, PageProps} from '$fresh/server.ts';
 import {Slice} from '../components/Slice.tsx';
 import {Comment} from '../models/Comment.ts';
+import {load} from "https://deno.land/std/dotenv/mod.ts";
+
+const env = await load();
 
 export const handler: Handlers<Comment[][] | null> = {
     async GET(_, ctx) {
-        const resp = await fetch(`https://powerful-plains-87201.herokuapp.com/api/comments`);
+        const resp = await fetch(env['API_BASE_URL']);
         if (resp.status !== 200) {
             return ctx.render(null);
         }
         const response = await resp.json();
         const chunkedComments: Comment[][] = [];
-        for (let i = 0; i < response.data.length; i += 3) {
-            const chunk = response.data.slice(i, i + 3);
+        for (let i = 0; i < response.length; i += 3) {
+            const chunk = response.slice(i, i + 3);
             chunkedComments.push(chunk);
         }
         return ctx.render(chunkedComments);
