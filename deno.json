@@ -1,8 +1,8 @@
 {
   "tasks": {
-    "start": "deno run -A --watch=static/,routes/ dev.ts",
-    "build": "deno run -A dev.ts build",
-    "preview": "deno run -A main.ts"
+    "start": "deno run --allow-env -A --watch=static/,routes/ dev.ts",
+    "build": "deno run --allow-env -A dev.ts build",
+    "preview": "deno run --allow-env -A main.ts"
   },
   "imports": {
     "$fresh/": "https://deno.land/x/fresh@1.4.2/",
