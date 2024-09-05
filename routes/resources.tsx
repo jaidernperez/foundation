@@ -9,26 +9,41 @@ export default function Resources() {
                 <h1 className={'fw-bold mb-4 text-center'}>Documentos Legales</h1>
                 <ul>
                     <li className="nav-item px-2">
-                        <a className="nav-link fw-medium" href="/resources/ACTA ASAMBLEA 2023.pdf">ACTA ASAMBLEA 2023.pdf</a>
+                        <a className="nav-link fw-medium"
+                           href="/resources/1. Estados Financieros 2023 Dictaminado y Aprobado.pdf">1. Estados
+                            Financieros 2023 Dictaminado y Aprobado.pdf</a>
                     </li>
 
                     <li className="nav-item px-2">
-                        <a className="nav-link fw-medium" href="/resources/CERTIFICADO CAMARA DE COMERCIO.pdf">CERTIFICADO CAMARA DE COMERCIO.pdf</a>
+                        <a className="nav-link fw-medium"
+                           href="/resources/2. Certificado de cumplimiento de requisitos.pdf">2. Certificado de
+                            cumplimiento de requisitos.pdf</a>
                     </li>
 
                     <li className="nav-item px-2">
-                        <a className="nav-link fw-medium" href="/resources/CERTIFICADO CUMPLIMIENTO DE REQUISITOS ART.364-5.pdf">CERTIFICADO CUMPLIMIENTO DE REQUISITOS ART.364-5.pdf</a></li>
+                        <a className="nav-link fw-medium" href="/resources/3. Acta de constitución.pdf">3. Acta de
+                            constitución.pdf</a></li>
 
                     <li className="nav-item px-2">
-                        <a className="nav-link fw-medium" href="/resources/CERTIFICADO REPRESENTANTE LEGAL ART.364-3.pdf">CERTIFICADO REPRESENTANTE LEGAL ART.364-3.pdf</a>
+                        <a className="nav-link fw-medium"
+                           href="/resources/4. Certificado de existencia y representación legal.pdf">4. Certificado de
+                            existencia y representación legal.pdf</a>
                     </li>
 
                     <li className="nav-item px-2">
-                        <a className="nav-link fw-medium" href="/resources/DICTAMEN REVISOR FISCAL 2023.pdf">DICTAMEN REVISOR FISCAL 2023.pdf</a>
+                        <a className="nav-link fw-medium"
+                           href="/resources/5. Acta Asamblea autorización calificación.pdf">5. Acta Asamblea
+                            autorización calificación.pdf</a>
                     </li>
 
                     <li className="nav-item px-2">
-                        <a className="nav-link fw-medium" href="/resources/ESTADOS FINANCIEROS 2022.pdf">ESTADOS FINANCIEROS 2022.pdf</a>
+                        <a className="nav-link fw-medium" href="/resources/6. Estatutos 2024.pdf">6. Estatutos
+                            2024.pdf</a>
+                    </li>
+
+                    <li className="nav-item px-2">
+                        <a className="nav-link fw-medium" href="/resources/7. Certificado representante legal antecedentes judiciales.pdf">
+                            7. Certificado representante legal antecedentes judiciales.pdf</a>
                     </li>
 
                 </ul>
