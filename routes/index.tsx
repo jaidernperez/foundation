@@ -11,6 +11,7 @@ export const handler: Handlers<Comment[][] | null> = {
             return ctx.render(null);
         }
         const response = await resp.json();
+        console.log('Comments received: ', response);
         const chunkedComments: Comment[][] = [];
         for (let i = 0; i < response.length; i += 3) {
             const chunk = response.slice(i, i + 3);
@@ -21,6 +22,7 @@ export const handler: Handlers<Comment[][] | null> = {
 };
 
 export default function Home({data}: PageProps<Comment[][] | null>) {
+    console.log('Comments: ' + data)
     return (
         <main className={`main`} id="top">
             <Navbar home={true}/>
