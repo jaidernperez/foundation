@@ -8,10 +8,15 @@ export const handler: Handlers<Comment[][] | null> = {
     async GET(_, ctx): Promise<any> {
         const resp: Response = await fetch("https://foundation.deno.dev/api/comments");
         if (resp.status !== 200) {
+            console.error('Error fetching comments:', resp.status);
             return ctx.render(null);
         }
         const response = await resp.json();
         console.log('Comments received: ', response);
+        if (!Array.isArray(response)) {
+            console.error('Unexpected response format:', response);
+            return ctx.render(null);
+        }
         const chunkedComments: Comment[][] = [];
         for (let i = 0; i < response.length; i += 3) {
             const chunk = response.slice(i, i + 3);
