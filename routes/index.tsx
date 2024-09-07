@@ -8,7 +8,7 @@ export const handler: Handlers<Comment[][] | null> = {
     async GET(_, ctx): Promise<any> {
         const resp: Response = await fetch("https://foundation.deno.dev/api/comments");
         if (resp.status !== 200) {
-            console.error('Error fetching comments:', resp.status);
+            console.error(`Error fetching comments: Status: ${resp.status}, Response ${await resp.json()}`);
             return ctx.render(null);
         }
         const response = await resp.json();
